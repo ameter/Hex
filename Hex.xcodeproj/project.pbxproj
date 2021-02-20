@@ -15,6 +15,8 @@
 		834620FA25E039B200DEBFC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 834620E425E039B200DEBFC9 /* Assets.xcassets */; };
 		83DF488725E19AC9001B2B34 /* Hexagon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DF488625E19AC9001B2B34 /* Hexagon.swift */; };
 		83DF488825E19AC9001B2B34 /* Hexagon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DF488625E19AC9001B2B34 /* Hexagon.swift */; };
+		83DF488D25E1B0EB001B2B34 /* HexGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DF488C25E1B0EB001B2B34 /* HexGrid.swift */; };
+		83DF488E25E1B0EB001B2B34 /* HexGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DF488C25E1B0EB001B2B34 /* HexGrid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,7 @@
 		834620F325E039B200DEBFC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		834620F425E039B200DEBFC9 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		83DF488625E19AC9001B2B34 /* Hexagon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hexagon.swift; sourceTree = "<group>"; };
+		83DF488C25E1B0EB001B2B34 /* HexGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexGrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,7 @@
 				834620E325E039B100DEBFC9 /* ContentView.swift */,
 				834620E425E039B200DEBFC9 /* Assets.xcassets */,
 				83DF488625E19AC9001B2B34 /* Hexagon.swift */,
+				83DF488C25E1B0EB001B2B34 /* HexGrid.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -194,6 +198,7 @@
 				834620F725E039B200DEBFC9 /* ContentView.swift in Sources */,
 				834620F525E039B200DEBFC9 /* HexApp.swift in Sources */,
 				83DF488725E19AC9001B2B34 /* Hexagon.swift in Sources */,
+				83DF488D25E1B0EB001B2B34 /* HexGrid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +209,7 @@
 				834620F825E039B200DEBFC9 /* ContentView.swift in Sources */,
 				834620F625E039B200DEBFC9 /* HexApp.swift in Sources */,
 				83DF488825E19AC9001B2B34 /* Hexagon.swift in Sources */,
+				83DF488E25E1B0EB001B2B34 /* HexGrid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

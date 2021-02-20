@@ -17,6 +17,10 @@ struct Hexagon: InsettableShape {
     
     let orientation: Orientation
     
+    init(orientation: Orientation = .pointyTop) {
+        self.orientation = orientation
+    }
+    
     func path(in rect: CGRect) -> Path {
         // We want to draw a hexagon
         let sides = 6
