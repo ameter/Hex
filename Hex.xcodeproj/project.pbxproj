@@ -13,6 +13,8 @@
 		834620F825E039B200DEBFC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834620E325E039B100DEBFC9 /* ContentView.swift */; };
 		834620F925E039B200DEBFC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 834620E425E039B200DEBFC9 /* Assets.xcassets */; };
 		834620FA25E039B200DEBFC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 834620E425E039B200DEBFC9 /* Assets.xcassets */; };
+		83DF488725E19AC9001B2B34 /* Hexagon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DF488625E19AC9001B2B34 /* Hexagon.swift */; };
+		83DF488825E19AC9001B2B34 /* Hexagon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DF488625E19AC9001B2B34 /* Hexagon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		834620F125E039B200DEBFC9 /* Hex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		834620F325E039B200DEBFC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		834620F425E039B200DEBFC9 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		83DF488625E19AC9001B2B34 /* Hexagon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hexagon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,7 @@
 				834620E225E039B100DEBFC9 /* HexApp.swift */,
 				834620E325E039B100DEBFC9 /* ContentView.swift */,
 				834620E425E039B200DEBFC9 /* Assets.xcassets */,
+				83DF488625E19AC9001B2B34 /* Hexagon.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -189,6 +193,7 @@
 			files = (
 				834620F725E039B200DEBFC9 /* ContentView.swift in Sources */,
 				834620F525E039B200DEBFC9 /* HexApp.swift in Sources */,
+				83DF488725E19AC9001B2B34 /* Hexagon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +203,7 @@
 			files = (
 				834620F825E039B200DEBFC9 /* ContentView.swift in Sources */,
 				834620F625E039B200DEBFC9 /* HexApp.swift in Sources */,
+				83DF488825E19AC9001B2B34 /* Hexagon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
