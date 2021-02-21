@@ -8,8 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var hvm = HexVM(size: 7)
+    
     var body: some View {
-        HexGrid(hexVM: HexVM(size: 7))
+        ZStack {
+            VStack {
+                Text(hvm.turn == .one ? "Blue's Turn" : "Red's Turn")
+                
+                Spacer()
+            }
+            
+            HexGrid(hexVM: hvm)
+        }
     }
 }
 

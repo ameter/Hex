@@ -10,15 +10,17 @@ import SwiftUI
 struct Hexagon: InsettableShape {
     var insetAmount: CGFloat = 0
     
-    enum Orientation: Double {
+    enum Orientation {
         case pointyTop
         case flatTop
     }
     
     let orientation: Orientation
+    let points: [Int]
     
-    init(orientation: Orientation = .flatTop) {
+    init(orientation: Orientation = .flatTop, points: [Int] = Array(0...5)) {
         self.orientation = orientation
+        self.points = points
     }
     
     func path(in rect: CGRect) -> Path {
@@ -26,7 +28,7 @@ struct Hexagon: InsettableShape {
         let sides = 6
         let exteriorAngle = 360.0 / Double(sides) //* .pi / 180
         let interiorAngle = Double(sides - 2) * 180.0 / Double(sides)
-        let rotation = orientation == .pointyTop ? 90.0 : interiorAngle / 2.0
+        let rotation = orientation == .pointyTop ? 90.0 : interiorAngle // /2
         let width = rect.width - insetAmount * 2
         let height = rect.height - insetAmount * 2
         var size = 0.0
@@ -44,16 +46,35 @@ struct Hexagon: InsettableShape {
         var path = Path()
         
         // loop over all our points
-        for side in 0...sides  {
-            let angle = (Double(side) * exteriorAngle - rotation) * .pi / 180
+        var firstPoint = true
+        for side in 0..<sides  {
+            if points.contains(side) {
+                let angle = (Double(side) * exteriorAngle - rotation) * .pi / 180
+                let point = CGPoint(
+                    x: rect.midX + CGFloat(cos(angle) * size),
+                    y: rect.midY + CGFloat(sin(angle) * size)
+                )
+                // move to our first corner or draw a line to our next corner
+                if firstPoint {
+                    path.move(to: point)
+                    firstPoint = false
+                } else {
+                    path.addLine(to: point)
+                }
+            }
+        }
+        if points.contains(6) {
+            let angle = (Double(0) * exteriorAngle - rotation) * .pi / 180
             let point = CGPoint(
                 x: rect.midX + CGFloat(cos(angle) * size),
                 y: rect.midY + CGFloat(sin(angle) * size)
             )
-            // move to our first corner or draw a line to our next corner
-            side == 0 ? path.move(to: point) : path.addLine(to: point)
+            path.addLine(to: point)
         }
-        path.closeSubpath()
+        
+        if points.count == sides {
+            path.closeSubpath()
+        }
         
         return path
     }

@@ -13,6 +13,7 @@ struct HexGrid: View {
     let cols: Int
     let spacing: CGFloat = 2
     let cellSize = CGSize(width: 50, height: 50)
+    let edgeStyle = StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round)
     var hexagonHeight: CGFloat { (cellSize.height / 2) * cos(.pi / 6) * 2 }
     
     init(hexVM: HexVM) {
@@ -35,6 +36,10 @@ struct HexGrid: View {
                                 hvm.toggleTurn()
                             }
                         }
+                        .overlay(Hexagon(points: i < cols ? [0, 1, 2] : []).stroke(style: edgeStyle).foregroundColor(.red))
+                        .overlay(Hexagon(points: hvm.cells.count - 1 - i < cols ? [3, 4, 5] : []).stroke(style: edgeStyle).foregroundColor(.red))
+                        .overlay(Hexagon(points: i % cols == 0 ? [4, 5, 6] : []).stroke(style: edgeStyle).foregroundColor(.blue))
+                        .overlay(Hexagon(points: (i + 1) % cols == 0 ? [1, 2, 3] : []).stroke(style: edgeStyle).foregroundColor(.blue))
                         .frame(width: cellSize.width, height: cellSize.height)
                         .offset(y: col(i) * (hexagonHeight / 2 + (spacing / 2)))
                         .frame(width: cellSize.width * 0.75, height: hexagonHeight)
