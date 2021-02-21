@@ -17,7 +17,7 @@ struct Hexagon: InsettableShape {
     
     let orientation: Orientation
     
-    init(orientation: Orientation = .pointyTop) {
+    init(orientation: Orientation = .flatTop) {
         self.orientation = orientation
     }
     
