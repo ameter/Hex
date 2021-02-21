@@ -17,6 +17,12 @@
 		83DF488825E19AC9001B2B34 /* Hexagon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DF488625E19AC9001B2B34 /* Hexagon.swift */; };
 		83DF488D25E1B0EB001B2B34 /* HexGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DF488C25E1B0EB001B2B34 /* HexGrid.swift */; };
 		83DF488E25E1B0EB001B2B34 /* HexGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DF488C25E1B0EB001B2B34 /* HexGrid.swift */; };
+		83DF489525E222A5001B2B34 /* HexGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DF489425E222A5001B2B34 /* HexGame.swift */; };
+		83DF489625E222A5001B2B34 /* HexGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DF489425E222A5001B2B34 /* HexGame.swift */; };
+		83DF489A25E222DA001B2B34 /* HexVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DF489925E222DA001B2B34 /* HexVM.swift */; };
+		83DF489B25E222DA001B2B34 /* HexVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DF489925E222DA001B2B34 /* HexVM.swift */; };
+		83DF489F25E2232D001B2B34 /* HexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DF489E25E2232D001B2B34 /* HexCell.swift */; };
+		83DF48A025E2232D001B2B34 /* HexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DF489E25E2232D001B2B34 /* HexCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +36,9 @@
 		834620F425E039B200DEBFC9 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		83DF488625E19AC9001B2B34 /* Hexagon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hexagon.swift; sourceTree = "<group>"; };
 		83DF488C25E1B0EB001B2B34 /* HexGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexGrid.swift; sourceTree = "<group>"; };
+		83DF489425E222A5001B2B34 /* HexGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexGame.swift; sourceTree = "<group>"; };
+		83DF489925E222DA001B2B34 /* HexVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexVM.swift; sourceTree = "<group>"; };
+		83DF489E25E2232D001B2B34 /* HexCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +76,10 @@
 				834620E325E039B100DEBFC9 /* ContentView.swift */,
 				834620E425E039B200DEBFC9 /* Assets.xcassets */,
 				83DF488625E19AC9001B2B34 /* Hexagon.swift */,
+				83DF489925E222DA001B2B34 /* HexVM.swift */,
+				83DF489425E222A5001B2B34 /* HexGame.swift */,
 				83DF488C25E1B0EB001B2B34 /* HexGrid.swift */,
+				83DF489E25E2232D001B2B34 /* HexCell.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -197,6 +209,9 @@
 			files = (
 				834620F725E039B200DEBFC9 /* ContentView.swift in Sources */,
 				834620F525E039B200DEBFC9 /* HexApp.swift in Sources */,
+				83DF489F25E2232D001B2B34 /* HexCell.swift in Sources */,
+				83DF489A25E222DA001B2B34 /* HexVM.swift in Sources */,
+				83DF489525E222A5001B2B34 /* HexGame.swift in Sources */,
 				83DF488725E19AC9001B2B34 /* Hexagon.swift in Sources */,
 				83DF488D25E1B0EB001B2B34 /* HexGrid.swift in Sources */,
 			);
@@ -208,6 +223,9 @@
 			files = (
 				834620F825E039B200DEBFC9 /* ContentView.swift in Sources */,
 				834620F625E039B200DEBFC9 /* HexApp.swift in Sources */,
+				83DF48A025E2232D001B2B34 /* HexCell.swift in Sources */,
+				83DF489B25E222DA001B2B34 /* HexVM.swift in Sources */,
+				83DF489625E222A5001B2B34 /* HexGame.swift in Sources */,
 				83DF488825E19AC9001B2B34 /* Hexagon.swift in Sources */,
 				83DF488E25E1B0EB001B2B34 /* HexGrid.swift in Sources */,
 			);
