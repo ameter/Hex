@@ -17,6 +17,15 @@ class HexGame: ObservableObject {
 //            board = Array(repeating: Array(repeating: Cell(), count: size), count: size)
         }
     }
+    var win: Player {
+        if wquTop.connected(node: wquBottom) {
+            return .one
+        } else if wquLeft.connected(node: wquRight) {
+            return .two
+        } else {
+            return .empty
+        }
+    }
     @Published var board = [[Cell]]()
     @Published var turn = Player.one
     @Published var lastMove: (Int, Int)? = nil
@@ -55,7 +64,6 @@ class HexGame: ObservableObject {
             cell.state = turn
             for neighbor in getNeighbors(r: r, q: q) {
                 if neighbor.state == cell.state {
-                    print("WTF!")
                     cell.wquNode.union(node: neighbor.wquNode)
                 }
             }
@@ -92,15 +100,15 @@ class HexGame: ObservableObject {
         }
     }
     
-    func checkForWin() -> Player? {
-        if wquTop.connected(node: wquBottom) {
-            return .one
-        } else if wquLeft.connected(node: wquRight) {
-            return .two
-        } else {
-            return nil
-        }
-    }
+//    func checkForWin() -> Player? {
+//        if wquTop.connected(node: wquBottom) {
+//            return .one
+//        } else if wquLeft.connected(node: wquRight) {
+//            return .two
+//        } else {
+//            return nil
+//        }
+//    }
     
     func getCell(r: Int, q: Int) -> Cell? {
         if r >= 0 && r < size && q >= 0 && q < size {

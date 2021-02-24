@@ -27,6 +27,11 @@ struct ContentView: View {
             
             HexGrid(hexVM: hvm)
         }
+        .alert(isPresented: $hvm.showingWin) {
+            Alert(title: Text(hvm.winTitle), dismissButton: .default(Text("Play Again")) {
+                hvm.newGame()
+            })
+        }
     }
 }
 

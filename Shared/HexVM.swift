@@ -13,7 +13,24 @@ class HexVM: ObservableObject {
     private var anyCancellable: AnyCancellable? = nil
     
     var turn: String {
-        game.turn == .one ? "Red's Turn" : "Blue's Turn"
+        if game.win != .empty {
+            return "Game Over"
+        } else {
+            return game.turn == .one ? "Red's Turn" : "Blue's Turn"
+        }
+    }
+    
+    @Published var showingWin = false
+    
+    var winTitle: String {
+        switch game.win {
+        case .one:
+            return "Red won!"
+        case .two:
+            return "Blue won!"
+        case .empty:
+            return ""
+        }
     }
     
     var cells: [Tile] {
@@ -45,12 +62,19 @@ class HexVM: ObservableObject {
     func tileTapped(index: Int) {
         let (r, q) = indexToRQ(index: index)
         game.move(r: r, q: q)
-        dump(game.checkForWin())
+        if game.win != .empty {
+            showingWin = true
+        }
+//        dump(game.checkForWin())
 //        objectWillChange.send()
     }
     
     func indexToRQ(index: Int) -> (Int, Int) {
         (index / game.size, index % game.size)
+    }
+    
+    func newGame() {
+        game.newGame()
     }
 }
 
