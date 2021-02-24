@@ -8,12 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var hvm = HexVM(size: 7)
+    @StateObject var hvm = HexVM()
+//    @ObservedObject var game: HexGame
+    
+//    init() {
+//        let hvm = HexVM()
+//        game = hvm.game
+//        self.hvm = hvm
+//    }
     
     var body: some View {
         ZStack {
             VStack {
-                Text(hvm.turn == .one ? "Blue's Turn" : "Red's Turn")
+                Text(hvm.turn)
                 
                 Spacer()
             }

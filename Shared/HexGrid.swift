@@ -18,7 +18,7 @@ struct HexGrid: View {
     
     init(hexVM: HexVM) {
         self.hvm = hexVM
-        cols = hexVM.size
+        cols = hexVM.game.size
     }
     
     var body: some View {
@@ -26,15 +26,11 @@ struct HexGrid: View {
         LazyVGrid(columns: gridItems, spacing: spacing) {
             ForEach(0..<hvm.cells.count) { i in
                 ZStack {
-                    
                     Hexagon()
                         .foregroundColor(hvm.cells[i].color)
                         .opacity(0.8)
                         .onTapGesture {
-                            if hvm.cells[i].state == .empty {
-                                hvm.cells[i].state = hvm.turn == .one ? .blue : .red
-                                hvm.toggleTurn()
-                            }
+                            hvm.tileTapped(index: i)
                         }
                         .overlay(Hexagon(points: i < cols ? [0, 1, 2] : []).stroke(style: edgeStyle).foregroundColor(.red))
                         .overlay(Hexagon(points: hvm.cells.count - 1 - i < cols ? [3, 4, 5] : []).stroke(style: edgeStyle).foregroundColor(.red))
@@ -65,6 +61,6 @@ struct HexGrid: View {
 
 struct HexGrid_Previews: PreviewProvider {
     static var previews: some View {
-        HexGrid(hexVM: HexVM(size: 6))
+        HexGrid(hexVM: HexVM())
     }
 }

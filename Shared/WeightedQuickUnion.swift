@@ -18,49 +18,31 @@ import Foundation
  */
 
 
-class WeightedQuickUnion {
-    class Node {
-        var parent: Node? = nil
-        var weight = 1
-        
-        var root: Node {
-            var root = self
-            while let nextUp = root.parent {
-                root = nextUp
+class WeightedQuickUnionNode {
+    var parent: WeightedQuickUnionNode? = nil
+    var weight = 1
+    
+    var root: WeightedQuickUnionNode {
+        var root = self
+        while let nextUp = root.parent {
+            root = nextUp
+        }
+        return root
+    }
+    
+    func union(node: WeightedQuickUnionNode) {
+        if node.root !== self.root { // only union them if they aren't already unioned!  This was a tricky bug to find.
+            if node.root.weight > self.root.weight {
+                self.root.parent = node.root
+                node.root.weight += self.root.weight
+            } else {
+                node.root.parent = self.root
+                self.root.weight += node.root.weight
             }
-            return root
         }
     }
     
-    var nodes = [Int : Node]()
-
-    func addNode(r: Int, q: Int) {
-        nodes[hash(r: r, q: q)] = Node()
-    }
-    
-    func getNode(r: Int, q: Int) -> Node? {
-        return nodes[hash(r: r, q: q)]
-    }
-    
-    func hash(r: Int, q: Int) -> Int {
-        var hasher = Hasher()
-        hasher.combine(r)
-        hasher.combine(q)
-        let hash = hasher.finalize()
-        return hash
-    }
-    
-    func union(nodeA: Node, nodeB: Node) {
-        if nodeA.root.weight > nodeB.root.weight {
-            nodeB.root.parent = nodeA.root
-            nodeA.root.weight += nodeB.weight
-        } else {
-            nodeA.root.parent = nodeB.root
-            nodeB.root.weight += nodeA.weight
-        }
-    }
-    
-    func connected(nodeA: Node, nodeB: Node) -> Bool {
-        nodeA.root === nodeB.root
+    func connected(node: WeightedQuickUnionNode) -> Bool {
+        self.root === node.root
     }
 }

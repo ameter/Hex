@@ -21,8 +21,6 @@
 		83DF489625E222A5001B2B34 /* HexGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DF489425E222A5001B2B34 /* HexGame.swift */; };
 		83DF489A25E222DA001B2B34 /* HexVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DF489925E222DA001B2B34 /* HexVM.swift */; };
 		83DF489B25E222DA001B2B34 /* HexVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DF489925E222DA001B2B34 /* HexVM.swift */; };
-		83DF489F25E2232D001B2B34 /* HexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DF489E25E2232D001B2B34 /* HexCell.swift */; };
-		83DF48A025E2232D001B2B34 /* HexCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DF489E25E2232D001B2B34 /* HexCell.swift */; };
 		83DF48A425E356B0001B2B34 /* WeightedQuickUnion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DF48A325E356B0001B2B34 /* WeightedQuickUnion.swift */; };
 		83DF48A525E356B0001B2B34 /* WeightedQuickUnion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83DF48A325E356B0001B2B34 /* WeightedQuickUnion.swift */; };
 /* End PBXBuildFile section */
@@ -40,7 +38,6 @@
 		83DF488C25E1B0EB001B2B34 /* HexGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexGrid.swift; sourceTree = "<group>"; };
 		83DF489425E222A5001B2B34 /* HexGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexGame.swift; sourceTree = "<group>"; };
 		83DF489925E222DA001B2B34 /* HexVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexVM.swift; sourceTree = "<group>"; };
-		83DF489E25E2232D001B2B34 /* HexCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexCell.swift; sourceTree = "<group>"; };
 		83DF48A325E356B0001B2B34 /* WeightedQuickUnion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightedQuickUnion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,7 +79,6 @@
 				83DF489925E222DA001B2B34 /* HexVM.swift */,
 				83DF489425E222A5001B2B34 /* HexGame.swift */,
 				83DF488C25E1B0EB001B2B34 /* HexGrid.swift */,
-				83DF489E25E2232D001B2B34 /* HexCell.swift */,
 				83DF48A325E356B0001B2B34 /* WeightedQuickUnion.swift */,
 			);
 			path = Shared;
@@ -214,7 +210,6 @@
 				834620F725E039B200DEBFC9 /* ContentView.swift in Sources */,
 				834620F525E039B200DEBFC9 /* HexApp.swift in Sources */,
 				83DF48A425E356B0001B2B34 /* WeightedQuickUnion.swift in Sources */,
-				83DF489F25E2232D001B2B34 /* HexCell.swift in Sources */,
 				83DF489A25E222DA001B2B34 /* HexVM.swift in Sources */,
 				83DF489525E222A5001B2B34 /* HexGame.swift in Sources */,
 				83DF488725E19AC9001B2B34 /* Hexagon.swift in Sources */,
@@ -229,7 +224,6 @@
 				834620F825E039B200DEBFC9 /* ContentView.swift in Sources */,
 				834620F625E039B200DEBFC9 /* HexApp.swift in Sources */,
 				83DF48A525E356B0001B2B34 /* WeightedQuickUnion.swift in Sources */,
-				83DF48A025E2232D001B2B34 /* HexCell.swift in Sources */,
 				83DF489B25E222DA001B2B34 /* HexVM.swift in Sources */,
 				83DF489625E222A5001B2B34 /* HexGame.swift in Sources */,
 				83DF488825E19AC9001B2B34 /* Hexagon.swift in Sources */,
